@@ -7,7 +7,7 @@ public class HelloWorld {
 
 		System.out.println("Hi System, Use your output device (monitor) to print a line ::");
 		
-		System.out.println("Hello World!!!");
+		System.out.println("Hello Students!!!");
 
 	}
 
