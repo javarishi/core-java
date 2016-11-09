@@ -25,6 +25,10 @@ public class ListTest {
 		// fromIndex - inclusive toIndex - exclusive
 		System.out.println(testArrayList.subList(1, 3));
 		
+		for(String str : testArrayList){
+			System.out.println("Each String in this List " + str);
+		}
+		
 	}
 
 }
