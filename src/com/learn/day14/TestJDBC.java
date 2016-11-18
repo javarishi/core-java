@@ -3,7 +3,6 @@ package com.learn.day14;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Properties;
@@ -19,6 +18,9 @@ public class TestJDBC {
 			+ "    `actor`.`last_name`, "
 			+ "    `actor`.`last_update` "
 			+ "FROM `sakila`.`actor`;";
+	
+	static String updateQuery = ""
+			+ "Update actor set last_name = 'Trainings' where actor_id = 200;";
 
 	public static void main(String[] args) {
 		try {
@@ -56,6 +58,8 @@ public class TestJDBC {
 					}
 				}
 				
+				int rowsAffected = stmt.executeUpdate(updateQuery);
+				System.out.println("Number of rows affected :: " + rowsAffected);
 				
 				
 			}
